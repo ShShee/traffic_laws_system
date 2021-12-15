@@ -1,0 +1,117 @@
+input[type="text"],
+select {
+  height: 100%;
+  padding: 12px 0px 12px 50px;
+  display: inline-block;
+  border: 0px solid #ccc;
+  border-radius: 40px 0px 0px 40px;
+  box-sizing: border-box;
+  font-family: "Oswald";
+  font-size: 24px;
+  width: 100%;
+}
+
+input,
+input::-webkit-input-placeholder {
+  font-size: 24px;
+  line-height: 3;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin-bottom: 17px;
+}
+.wrapper {
+  margin: 0 auto;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 0rem 1.45rem 0rem 3rem;
+  align-items: center;
+}
+.flexContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #f00;
+}
+.firstCol {
+  width: 25%;
+  box-sizing: border-box;
+  order: 1;
+  border: 1px solid #f00;
+  align-items: center;
+}
+.secondCol {
+  display: flex; /*Add this*/
+  width: 50%;
+  height: 10%;
+  box-sizing: border-box;
+  order: 2;
+  border: 1px solid #0f0;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 40px;
+}
+.secondCol .innerFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.secondCol .innerFlex .firstItem {
+  /*border: 1px solid #00f;*/
+  width: 85%;
+  order: 1;
+}
+.secondCol .innerFlex .secondItem {
+  width: 1%;
+  height: 75%;
+  order: 2;
+  border-right: 3px solid #ccc;
+}
+
+.secondCol .innerFlex .thirdItem {
+  background: url(../images/more_2.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0px 40px 40px 0px;
+  cursor: pointer;
+  /*border: 1px solid #f0f;*/
+  width: 14%;
+  height: 100%;
+  order: 3;
+  border: 0;
+}
+
+.thirdItem:active  /* use Dot here */ {
+  background: url(../images/more_1.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.thirdCol {
+  width: 25%;
+  box-sizing: border-box;
+  order: 3;
+  border: 1px solid #f0f;
+  box-sizing: border-box;
+}
