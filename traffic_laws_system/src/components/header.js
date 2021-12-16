@@ -56,7 +56,13 @@ const Header = ({ siteTitle }) => (
           </div>
         </div>
 
-        <div class="thirdCol">789</div>
+        <div class="thirdCol">
+          <div class="innerFlexV2">
+            <input class="searchButton" type="submit" value="" />
+            <input class="chatbotButton" type="submit" value="" />
+            <input class="switchViewButton" type="submit" value="" />
+          </div>
+        </div>
       </div>
     </div>
   </header>

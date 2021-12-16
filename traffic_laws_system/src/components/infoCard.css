@@ -1,0 +1,29 @@
+.container {
+  height: 520px;
+  width: 600px;
+  background-color: white;
+  border: 1px solid black;
+  position: relative;
+}
+
+.title {
+  font-family: "Oswald";
+  margin: 0rem 1.45rem 0rem 1.45rem;
+  font-size: 32px;
+}
+
+.text {
+  margin: 1rem 1.45rem 0rem 1.45rem;
+  font-family: "Oswald";
+  color: #999;
+}
+
+.date {
+  margin: 0rem 1.45rem 1.45rem 1.45rem;
+  font-family: "Oswald";
+  text-align: end;
+  color: #999;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

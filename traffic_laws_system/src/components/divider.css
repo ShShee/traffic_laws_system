@@ -1,0 +1,14 @@
+.horizontal_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.horizontal_text {
+  width: 90px;
+  font-family: "Oswald";
+}
+.horizontal_divider {
+  width: 100%;
+  height: 45px;
+  border-bottom: 5px solid #ccc;
+}

@@ -36,8 +36,10 @@ p {
   height: 100%;
   width: 100%;
   display: flex;
-  padding: 0rem 1.45rem 0rem 3rem;
+  padding: 0rem 3rem 0rem 3rem;
   align-items: center;
+  margin-bottom: 1.45rem;
+  border: none;
 }
 .flexContainer {
   display: flex;
@@ -47,22 +49,19 @@ p {
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #f00;
 }
 .firstCol {
-  width: 25%;
+  width: 18%;
   box-sizing: border-box;
   order: 1;
-  border: 1px solid #f00;
   align-items: center;
 }
 .secondCol {
   display: flex; /*Add this*/
-  width: 50%;
+  width: 55%;
   height: 10%;
   box-sizing: border-box;
   order: 2;
-  border: 1px solid #0f0;
   background-color: white;
   box-sizing: border-box;
   border-radius: 40px;
@@ -88,20 +87,20 @@ p {
 }
 
 .secondCol .innerFlex .thirdItem {
+  cursor: pointer;
   background: url(../images/more_2.png) no-repeat;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0px 40px 40px 0px;
-  cursor: pointer;
   /*border: 1px solid #f0f;*/
   width: 14%;
   height: 100%;
   order: 3;
-  border: 0;
+  border: none;
 }
 
-.thirdItem:active  /* use Dot here */ {
+.secondCol .innerFlex .thirdItem:active {
   background: url(../images/more_1.png) no-repeat;
   background-size: contain;
   background-repeat: no-repeat;
@@ -109,9 +108,84 @@ p {
 }
 
 .thirdCol {
-  width: 25%;
+  width: 18%;
   box-sizing: border-box;
   order: 3;
-  border: 1px solid #f0f;
   box-sizing: border-box;
+}
+
+.thirdCol .innerFlexV2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.thirdCol .innerFlexV2 .searchButton {
+  cursor: pointer;
+  background: url(../images/more_2.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 90px;
+  width: 90px;
+  height: 90px;
+  order: 1;
+  background-color: #ff0000;
+  border: none;
+}
+
+.thirdCol .innerFlexV2 .chatbotButton {
+  cursor: pointer;
+  background: url(../images/more_2.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 90px;
+  width: 90px;
+  height: 90px;
+  order: 2;
+  background-color: #ffff00;
+  border: none;
+}
+
+.thirdCol .innerFlexV2 .switchViewButton {
+  cursor: pointer;
+  background: url(../images/more_2.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 90px;
+  width: 90px;
+  height: 90px;
+  order: 3;
+  background-color: #00ff00;
+  border: none;
+}
+
+.thirdCol .innerFlexV2 .searchButton:active {
+  background: url(../images/more_1.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ff0000;
+}
+
+.thirdCol .innerFlexV2 .chatbotButton:active {
+  background: url(../images/more_1.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffff00;
+}
+
+.thirdCol .innerFlexV2 .switchViewButton:active {
+  background: url(../images/more_1.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #00ff00;
 }
