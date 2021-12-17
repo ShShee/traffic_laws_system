@@ -1,28 +1,32 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { Navigation, Pagination, Scrollbar, A11y, EffectCards } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
+
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/scrollbar"
 import "@fontsource/oswald/300.css"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import HorizontalDivider from "../components/horizontalDivider"
 import InfoCard from "../components/infoCard"
-import "./index.css"
-// Import Swiper React components
-import { Navigation, Pagination, Scrollbar, A11y, EffectCards } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
+import RulesContainer from "../components/rulesContainer"
 
-// Import Swiper styles
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import "swiper/css/scrollbar"
+import "./index.css"
 
 const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" />
       <HorizontalDivider openingLine="Gợi ý" />
+      <RulesContainer showOrigin={true} title="Luật xử phạt" theme="#ff0000" />
+      <RulesContainer showOrigin={true} title="Luật cảnh cáo" theme="#ffff00" />
+      <RulesContainer showOrigin={true} title="Luật quy định" theme="#00ff00" />
+      <RulesContainer showOrigin={true} title="Luật chung" theme="#3399FF" />
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={100}

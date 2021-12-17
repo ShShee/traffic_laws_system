@@ -1,0 +1,13 @@
+.rulesContainer {
+  width: 100%;
+  padding: 0.45rem 0rem;
+  margin: 0rem 0rem 1.45rem 0rem;
+}
+
+.rulesType {
+  margin: 1rem 1.45rem 0rem 1.45rem;
+  font-size: 32px;
+  font-family: "Oswald";
+  color: #fff;
+  text-shadow: 0 0 3px #000;
+}
