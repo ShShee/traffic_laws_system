@@ -12,7 +12,7 @@ const InfoCard = ({ title }) => (
       width={600}
       height={300}
       quality={100}
-      alt="A Gatsby astronaut"
+      alt="Image of Laws Document"
       imgStyle={{ objectFit: `none` }}
       style={{ marginBottom: `1.45rem` }}
     />

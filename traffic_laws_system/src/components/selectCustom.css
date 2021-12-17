@@ -1,0 +1,61 @@
+.option-custom {
+  position: relative;
+}
+
+.select-input {
+  font-family: "Oswald";
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #000;
+  padding: 0 10px;
+  position: relative;
+  height: 46px;
+  width: 420px;
+  background-color: white;
+}
+
+.select-input::before {
+  position: absolute;
+  content: "";
+  right: 18px;
+  top: 20px;
+  border-top: 5px solid #ccc;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.select-title {
+  color: #252525;
+}
+
+.select-title.placeholder {
+  color: #999;
+  font-family: "Oswald";
+  font-size: 24px;
+}
+
+.select-list {
+  font-family: "Oswald";
+  font-size: 24px;
+  border: 1px solid #000;
+  background-color: white;
+  position: absolute;
+  border-top: none;
+  z-index: 10;
+  width: 420px;
+}
+
+.select-item {
+  font-family: "Oswald";
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.select-item:hover {
+  background: #eee;
+}

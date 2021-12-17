@@ -1,0 +1,24 @@
+.advancedSearch {
+  width: 100%;
+  background-color: #3399ff;
+  position: absolute;
+  padding: 1.45rem 3rem 0 3rem;
+  border-top: 5px solid white;
+}
+
+.searchOptions {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+  align-content: center;
+  list-style-type: none;
+  margin: 0 0 1.45rem 0;
+}
+
+.flexSearchOptions {
+  margin: 0 3rem 0 0rem;
+  padding: 0;
+  flex-basis: fit-content;
+}

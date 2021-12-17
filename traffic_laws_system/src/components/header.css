@@ -29,16 +29,16 @@ body {
 p {
   margin-bottom: 17px;
 }
+
 .wrapper {
   margin: 0 auto;
-  border: 1px solid #000;
   box-sizing: border-box;
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   padding: 0rem 3rem 0rem 3rem;
   align-items: center;
-  margin-bottom: 1.45rem;
   border: none;
 }
 .flexContainer {
@@ -86,9 +86,9 @@ p {
   border-right: 3px solid #ccc;
 }
 
-.secondCol .innerFlex .thirdItem {
+.secondCol .innerFlex .thirdItemMore {
   cursor: pointer;
-  background: url(../images/more_2.png) no-repeat;
+  background: url(../images/more_1.png) no-repeat;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -100,8 +100,29 @@ p {
   border: none;
 }
 
-.secondCol .innerFlex .thirdItem:active {
-  background: url(../images/more_1.png) no-repeat;
+.secondCol .innerFlex .thirdItemMore:active {
+  background: url(../images/more_2.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.secondCol .innerFlex .thirdItemLess {
+  cursor: pointer;
+  background: url(../images/less_1.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0px 40px 40px 0px;
+  /*border: 1px solid #f0f;*/
+  width: 14%;
+  height: 100%;
+  order: 3;
+  border: none;
+}
+
+.secondCol .innerFlex .thirdItemLess:active {
+  background: url(../images/less_2.png) no-repeat;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -126,66 +147,84 @@ p {
 
 .thirdCol .innerFlexV2 .searchButton {
   cursor: pointer;
-  background: url(../images/more_2.png) no-repeat;
-  background-size: contain;
+  background: url(../images/search.png) no-repeat;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 90px;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   order: 1;
-  background-color: #ff0000;
   border: none;
 }
 
 .thirdCol .innerFlexV2 .chatbotButton {
   cursor: pointer;
-  background: url(../images/more_2.png) no-repeat;
-  background-size: contain;
+  background: url(../images/chatbot.png) no-repeat;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 90px;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   order: 2;
-  background-color: #ffff00;
   border: none;
 }
 
-.thirdCol .innerFlexV2 .switchViewButton {
+.thirdCol .innerFlexV2 .viewImageButton {
   cursor: pointer;
-  background: url(../images/more_2.png) no-repeat;
-  background-size: contain;
+  background: url(../images/view_image.png) no-repeat;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 90px;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   order: 3;
-  background-color: #00ff00;
+  border: none;
+}
+
+.thirdCol .innerFlexV2 .viewDocButton {
+  cursor: pointer;
+  background: url(../images/view_document.png) no-repeat;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+  order: 3;
   border: none;
 }
 
 .thirdCol .innerFlexV2 .searchButton:active {
-  background: url(../images/more_1.png) no-repeat;
-  background-size: contain;
+  background: url(../images/search.png) no-repeat;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 100px;
   background-color: #ff0000;
 }
 
 .thirdCol .innerFlexV2 .chatbotButton:active {
-  background: url(../images/more_1.png) no-repeat;
-  background-size: contain;
+  background: url(../images/chatbot.png) no-repeat;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 100px;
   background-color: #ffff00;
 }
 
-.thirdCol .innerFlexV2 .switchViewButton:active {
-  background: url(../images/more_1.png) no-repeat;
-  background-size: contain;
+.thirdCol .innerFlexV2 .viewImageButton:active {
+  background: url(../images/view_image.png) no-repeat;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 100px;
+  background-color: #00ff00;
+}
+
+.thirdCol .innerFlexV2 .viewDocButton:active {
+  background: url(../images/view_document.png) no-repeat;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100px;
   background-color: #00ff00;
 }

@@ -1,0 +1,13 @@
+.containerSpinner {
+  display: flex;
+  justify-self: left;
+  align-items: center;
+  flex-direction: row;
+}
+
+.titleSpinner {
+  margin: 0px 20px 0px 0px;
+  font-size: 24px;
+  font-family: "Oswald";
+  color: #fff;
+}
