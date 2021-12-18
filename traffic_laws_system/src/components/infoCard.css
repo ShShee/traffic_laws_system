@@ -1,24 +1,25 @@
-.container {
+.containerInfoCard {
   height: 520px;
   width: 600px;
   background-color: white;
   border: 1px solid black;
   position: relative;
+  cursor: pointer;
 }
 
-.title {
+.titleInfoCard {
   font-family: "Oswald";
   margin: 0rem 1.45rem 0rem 1.45rem;
   font-size: 32px;
 }
 
-.text {
+.textInfoCard {
   margin: 1rem 1.45rem 0rem 1.45rem;
   font-family: "Oswald";
-  color: #999;
+  text-align: justify;
 }
 
-.date {
+.dateInfoCard {
   margin: 0rem 1.45rem 1.45rem 1.45rem;
   font-family: "Oswald";
   text-align: end;

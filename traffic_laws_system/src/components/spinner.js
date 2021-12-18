@@ -1,7 +1,4 @@
 import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import "@fontsource/oswald/300.css"
 import "./spinner.css"
 import SelectCustom from "./selectCustom"

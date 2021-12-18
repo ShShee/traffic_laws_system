@@ -10,9 +10,12 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Viewer from "./viewer"
+
+import configData from "../../config.json"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, setChangeView, hideViewer }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,12 +30,16 @@ const Layout = ({ children }) => {
     <>
       {" "}
       <div class="header">
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <Header
+          siteTitle={data.site.siteMetadata?.title || `Title`}
+          setChangeView={setChangeView}
+        />
       </div>
+      <Viewer hideViewer={hideViewer} />
       <div
         style={{
           margin: `0 auto`,
-          padding: `0 3rem 1.45rem`,
+          padding: `1.45rem 3rem`,
         }}
       >
         <main>{children}</main>
@@ -43,7 +50,15 @@ const Layout = ({ children }) => {
         >
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com" target="_blank">
+            Gatsby
+          </a>
+          {` `}
+          by
+          {` `}
+          <a href={configData["CREATOR GIT"]} target="_blank">
+            ShShee
+          </a>
         </footer>
       </div>
     </>

@@ -1,22 +1,21 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import { useState } from "react"
 import "@fontsource/oswald/300.css"
 import "./header.css"
+import configData from "../../config.json"
 
 import AdvancedSearch from "./advancedSearch"
 
-const Header = ({ siteTitle }) => {
-  const [showAdvance, setShowAdvance] = React.useState(true)
+const Header = ({ siteTitle, setChangeView }) => {
+  const [showAdvance, setShowAdvance] = React.useState(false)
   const [switchToDoc, setSwitchToDoc] = React.useState(false)
 
   return (
     <header
       style={{
-        background: `#3399FF`,
-        marginBottom: "1.45rem",
+        background: configData.THEME_COLORS.PRIMARY,
       }}
     >
       <div class="wrapper">
@@ -77,7 +76,10 @@ const Header = ({ siteTitle }) => {
                 class={!switchToDoc ? "viewImageButton" : "viewDocButton"}
                 type="submit"
                 value=""
-                onClick={() => setSwitchToDoc(!switchToDoc)}
+                onClick={() => {
+                  setChangeView()
+                  setSwitchToDoc(!switchToDoc)
+                }}
               />
             </div>
           </div>

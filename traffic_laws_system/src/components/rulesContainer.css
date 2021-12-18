@@ -1,7 +1,8 @@
 .rulesContainer {
   width: 100%;
   padding: 0.45rem 0rem;
-  margin: 0rem 0rem 1.45rem 0rem;
+  margin: 0.45rem 0rem 1.45rem 0rem;
+  cursor: default;
 }
 
 .rulesType {

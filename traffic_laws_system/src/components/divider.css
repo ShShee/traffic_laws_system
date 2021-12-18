@@ -6,6 +6,7 @@
 .horizontal_text {
   width: 90px;
   font-family: "Oswald";
+  cursor: default;
 }
 .horizontal_divider {
   width: 100%;

@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "swiper": "^7.3.3"
+  },
+  "devDependencies": {
+    "react-prismazoom": "^2.0.3"
   }
 }

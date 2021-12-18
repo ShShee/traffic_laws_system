@@ -5,7 +5,7 @@
 }
 
 .ruleContentHolder {
-  margin: 0.45rem 1.45rem 0.45rem 1.45rem;
+  margin: 0.45rem 1.45rem;
   display: flex;
   justify-self: left;
   flex-direction: row;
@@ -25,21 +25,17 @@
   font-size: 24px;
   font-family: "Oswald";
   color: #000;
+  text-align: justify;
 }
 
 .ruleOriginHolder {
-  margin: 0.45rem 1.45rem 0.45rem 1.45rem;
+  margin: 0.45rem 1.45rem;
   display: flex;
   justify-content: end;
+  font-family: "Oswald";
 }
 
 .ruleOrigin {
   font-family: "Oswald";
-  color: #3399ff;
-  cursor: pointer;
-}
-
-.ruleOrigin:active {
-  font-family: "Oswald";
-  color: blueviolet;
+  margin-left: 5px;
 }

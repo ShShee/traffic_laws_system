@@ -1,0 +1,94 @@
+#overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 8;
+}
+
+.buttonsHolder {
+  margin: 1.45rem 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.closeViewer {
+  cursor: pointer;
+  background: url(../images/close_1.png) no-repeat;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  right: 0;
+  margin-right: 3rem;
+  z-index: 9;
+  width: 60px;
+  height: 60px;
+}
+
+.closeViewer:active {
+  background: url(../images/close_2.png) no-repeat;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.zoomInViewer {
+  cursor: pointer;
+  background: url(../images/plus_1.png) no-repeat;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+  margin-right: 4rem;
+  position: fixed;
+  z-index: 9;
+}
+
+.zoomInViewer:active {
+  background: url(../images/plus_2.png) no-repeat;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.zoomOutViewer {
+  cursor: pointer;
+  background: url(../images/minus_1.png) no-repeat;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+  margin-left: 4rem;
+  position: fixed;
+  z-index: 9;
+}
+
+.zoomOutViewer:active {
+  background: url(../images/minus_2.png) no-repeat;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imageHolder {
+  display: flex;
+  justify-content: center;
+}
+
+.App-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 5rem 3rem;
+}
+
+.App-zoom {
+  display: block;
+  width: 100%;
+}

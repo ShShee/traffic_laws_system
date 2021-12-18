@@ -21,7 +21,10 @@ const RuleItem = ({ willShowOrigin }) => (
     </div>
     {willShowOrigin ? (
       <div class="ruleOriginHolder">
-        <Link class="ruleOrigin">Theo tài liệu luật giao thông X</Link>
+        Lượt xem: 100 -
+        <a class="ruleOrigin" href="#" target="_blank">
+          Theo tài liệu luật giao thông X
+        </a>
       </div>
     ) : null}
   </div>
