@@ -8,9 +8,8 @@ import configData from "../../config.json"
 
 import AdvancedSearch from "./advancedSearch"
 
-const Header = ({ siteTitle, setChangeView }) => {
+const Header = ({ siteTitle, changeToDoc, setChangeView }) => {
   const [showAdvance, setShowAdvance] = React.useState(false)
-  const [switchToDoc, setSwitchToDoc] = React.useState(false)
 
   return (
     <header
@@ -73,13 +72,11 @@ const Header = ({ siteTitle, setChangeView }) => {
               <input class="searchButton" type="submit" value="" />
               <input class="chatbotButton" type="submit" value="" />
               <input
-                class={!switchToDoc ? "viewImageButton" : "viewDocButton"}
+                id="switchViewButton"
+                class={!changeToDoc ? "viewImageButton" : "viewDocButton"}
                 type="submit"
                 value=""
-                onClick={() => {
-                  setChangeView()
-                  setSwitchToDoc(!switchToDoc)
-                }}
+                onClick={() => setChangeView()}
               />
             </div>
           </div>

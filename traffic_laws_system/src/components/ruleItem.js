@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 const RuleItem = ({ willShowOrigin }) => (
   <div class="ruleItem">
     <div class="ruleContentHolder">
-      <h1 class="ruleLine">Điều n khoản m : </h1>
+      <h1 class="ruleLine">Điều n - Mục m : </h1>
       <p class="ruleContent">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
         ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
@@ -22,9 +22,9 @@ const RuleItem = ({ willShowOrigin }) => (
     {willShowOrigin ? (
       <div class="ruleOriginHolder">
         Lượt xem: 100 -
-        <a class="ruleOrigin" href="#" target="_blank">
+        <Link class="ruleOrigin" to="/details-page/">
           Theo tài liệu luật giao thông X
-        </a>
+        </Link>
       </div>
     ) : null}
   </div>

@@ -1,6 +1,6 @@
 .rulesContainer {
   width: 100%;
-  padding: 0.45rem 0rem;
+  padding: 0.45rem 0rem 1rem 0rem;
   margin: 0.45rem 0rem 1.45rem 0rem;
   cursor: default;
 }
@@ -11,4 +11,6 @@
   font-family: "Oswald";
   color: #fff;
   text-shadow: 0 0 3px #000;
+  text-align: justify;
+  line-height: 2.45rem;
 }

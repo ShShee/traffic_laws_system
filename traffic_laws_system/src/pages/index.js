@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Navigation, Pagination, Scrollbar, A11y, EffectCards } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -22,50 +22,30 @@ import "./index.css"
 
 const IndexPage = () => {
   const [changeToDocView, setChangeToDoc] = useState(false)
-  const [viewFull, setViewFull] = useState(false)
 
   function setChangeView() {
-    if (viewFull) return
     setChangeToDoc(!changeToDocView)
   }
 
-  function on() {
-    setViewFull(true)
-    document.getElementById("overlay").style.display = "block"
-  }
-
-  function off() {
-    setViewFull(false)
-    document.getElementById("overlay").style.display = "none"
+  function offDetailsPage() {
+    setChangeToDoc(false)
+    document.getElementById("switchViewButton").style = "viewImageButton"
   }
 
   return (
-    <Layout setChangeView={setChangeView} hideViewer={off}>
+    <Layout
+      setChangeView={setChangeView}
+      allowAutoMargin={true}
+      changeToDoc={changeToDocView}
+    >
       <Seo title="Home" />
       <HorizontalDivider openingLine="Gợi ý" />
       {changeToDocView ? (
-        <div>
-          <RulesContainer
-            showOrigin={true}
-            title="Luật xử phạt"
-            theme={configData.THEME_COLORS.RED}
-          />
-          <RulesContainer
-            showOrigin={true}
-            title="Luật cảnh cáo"
-            theme={configData.THEME_COLORS.YELLOW}
-          />
-          <RulesContainer
-            showOrigin={true}
-            title="Luật quy định"
-            theme={configData.THEME_COLORS.GREEN}
-          />
-          <RulesContainer
-            showOrigin={true}
-            title="Luật chung"
-            theme={configData.THEME_COLORS.PRIMARY}
-          />
-        </div>
+        <RulesContainer
+          showOrigin={true}
+          title="Các mức xử phạt vi phạm phổ biến"
+          theme={configData.THEME_COLORS.RED}
+        />
       ) : (
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -75,7 +55,7 @@ const IndexPage = () => {
           onSwiper={swiper => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          <SwiperSlide onClick={on}>
+          <SwiperSlide onClick={() => navigate("/details-page/")}>
             <InfoCard title="Tài liệu 1 - Luật giao thông A" />
           </SwiperSlide>
           <SwiperSlide>
@@ -106,7 +86,7 @@ const IndexPage = () => {
             style={{ marginBottom: `1.45rem` }}
           />
           <p>
-            <Link to="/page-2/">Go to page 2</Link> <br />
+            <Link to="/details-page/">Go to page 2</Link> <br />
             <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
             <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
             <Link to="/using-dsg">Go to "Using DSG"</Link>

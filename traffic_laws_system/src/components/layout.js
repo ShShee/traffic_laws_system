@@ -10,12 +10,13 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Viewer from "./viewer"
 
 import configData from "../../config.json"
 import "./layout.css"
 
-const Layout = ({ children, setChangeView, hideViewer }) => {
+export const ViewModesEnum = Object.freeze({ ViewImage: 1, ViewPDF: 2 })
+
+const Layout = ({ children, allowAutoMargin, setChangeView, changeToDoc }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,21 +33,18 @@ const Layout = ({ children, setChangeView, hideViewer }) => {
       <div class="header">
         <Header
           siteTitle={data.site.siteMetadata?.title || `Title`}
+          changeToDoc={changeToDoc}
           setChangeView={setChangeView}
         />
       </div>
-      <Viewer hideViewer={hideViewer} />
-      <div
-        style={{
-          margin: `0 auto`,
-          padding: `1.45rem 3rem`,
-        }}
-      >
+      <div class={allowAutoMargin ? "autoMargin" : null}>
         <main>{children}</main>
         <footer
-          style={{
-            marginTop: `2rem`,
-          }}
+          style={
+            allowAutoMargin
+              ? { padding: `2rem 0 2rem 0` }
+              : { padding: `2rem 3rem 2rem 3rem` }
+          }
         >
           © {new Date().getFullYear()}, Built with
           {` `}
