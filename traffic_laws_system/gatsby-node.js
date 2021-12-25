@@ -15,8 +15,8 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         rules: [
           {
             test: /react-prismazoom/,
-            //test: /react-pdf/,
-            //test: /pdfjs-dist/,
+            test: /react-pdf/,
+            test: /pdfjs-dist/,
 
             // check /pdfjs-dist/ too
             use: loaders.null(),
