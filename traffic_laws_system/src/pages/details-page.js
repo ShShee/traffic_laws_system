@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
-import Viewer from "../components/viewer"
+import LawsViewer from "../components/lawsviewer"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -15,7 +15,7 @@ const DetailsPage = () => {
   return (
     <Layout setChangeView={setChangeView} changeToDoc={changeToDocView}>
       <Seo title="Details Page" />
-      <Viewer changeToDoc={changeToDocView} />
+      <LawsViewer changeToDoc={changeToDocView} />
     </Layout>
   )
 }

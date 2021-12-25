@@ -1,9 +1,8 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useState, useRef, useEffect } from "react"
-import { Document, Page, pdfjs } from "react-pdf"
-
 import PrismaZoom from "react-prismazoom"
+import { Document, Page, pdfjs } from "react-pdf"
 
 import RulesContainer from "./rulesContainer"
 import { ViewModesEnum } from "./layout"
@@ -11,7 +10,7 @@ import { ViewModesEnum } from "./layout"
 import "@fontsource/oswald/300.css"
 import configData from "../../config.json"
 import pdfFile from "../documents/luat.pdf"
-import "./viewer.css"
+import "./lawsviewer.css"
 import { navigate } from "gatsby"
 
 const findPart = index => {
@@ -59,7 +58,7 @@ const findPart = index => {
   }
 }
 
-const Viewer = ({ changeToDoc, viewModesEnum }) => {
+const LawsViewer = ({ changeToDoc, viewModesEnum }) => {
   const prismaZoom = useRef()
 
   //For pdf view
@@ -180,4 +179,4 @@ const Viewer = ({ changeToDoc, viewModesEnum }) => {
   )
 }
 
-export default Viewer
+export default LawsViewer

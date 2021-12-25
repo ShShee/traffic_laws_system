@@ -9,12 +9,30 @@ exports.createPages = async ({ actions }) => {
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html" || stage === "develop-html") {
+  if (stage === "develop-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
-            test: /react-pdf/, // check /pdfjs-dist/ too
+            test: /react-prismazoom/,
+            test: /react-pdf/,
+            test: /pdfjs-dist/,
+
+            // check /pdfjs-dist/ too
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  } else if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-pdf/,
+            test: /pdfjs-dist/,
+            test: /react-prismazoom/,
+            test: /canvas/,
             use: loaders.null(),
           },
         ],
@@ -22,3 +40,15 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     })
   }
 }
+
+/*exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  if (stage === "build-html") {
+    
+  }
+}*/
