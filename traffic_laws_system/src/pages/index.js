@@ -58,10 +58,10 @@ const IndexPage = () => {
           <SwiperSlide onClick={() => navigate("/details-page/")}>
             <InfoCard title="Tài liệu 1 - Luật giao thông A" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide onClick={() => navigate("/details-page/")}>
             <InfoCard title="Tài liệu 2 - Luật giao thông B" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide onClick={() => navigate("/details-page/")}>
             <InfoCard title="Tài liệu 3 - Luật giao thông C" />
           </SwiperSlide>
           <SwiperSlide>
